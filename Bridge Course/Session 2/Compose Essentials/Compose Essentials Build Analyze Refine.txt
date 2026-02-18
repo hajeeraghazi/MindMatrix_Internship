@@ -1,0 +1,90 @@
+The objective of this task was to create and document a Jetpack Compose project while exploring layout primitives, modifiers, UI structure, and design refinement.
+
+Project Description
+
+In this project, I developed a Student Dashboard UI using Jetpack Compose. The application demonstrates structured UI layout using fundamental Compose components such as:
+
+Column
+
+Row
+
+Box
+
+Text
+
+Spacer
+
+Modifier
+
+Layout Structure
+🔹 Column
+
+Used as the main vertical layout container to structure the dashboard elements.
+
+🔹 Row
+
+Used inside the Task Summary section to arrange task statistics horizontally.
+
+🔹 Box
+
+Used to create a card-like profile section with background color and rounded corners.
+
+Modifier Usage
+
+The following modifiers were applied:
+
+fillMaxSize() → Makes layout occupy full screen
+
+fillMaxWidth() → Expands component horizontally
+
+padding() → Adds spacing around elements
+
+background() → Adds background color
+
+RoundedCornerShape() → Adds rounded corners
+
+Arrangement.SpaceBetween → Distributes elements evenly
+
+Alignment.CenterVertically → Aligns content vertically
+
+Responsive Design Testing
+
+The UI was tested using @Preview to ensure:
+
+Proper spacing
+
+Alignment consistency
+
+Clean hierarchy
+
+Readability
+
+Design Refinement
+
+Improvements made during refinement:
+
+Added spacing using Spacer
+
+Applied background colors for visual grouping
+
+Used rounded corners for modern UI styling
+
+Maintained consistent padding for better accessibility
+
+Learning Outcomes
+
+Through this task, I strengthened my understanding of:
+
+Composable functions
+
+Layout hierarchy
+
+State-free UI structure
+
+Modifier chaining
+
+UI responsiveness
+
+Design consistency principles
+
+This task improved my ability to structure, analyze, and refine Compose-based UI layouts effectively.
