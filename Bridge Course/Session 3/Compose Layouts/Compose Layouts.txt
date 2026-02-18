@@ -1,0 +1,65 @@
+AADK Task 3 – Compose Layouts: Text and Image
+
+The objective of this task is to understand how Text and Image composables work together in Jetpack Compose to create visually structured and accessible UI layouts.
+
+Implementation Overview
+Text Composable
+
+Used to display text content on screen.
+Two Text() composables were used:
+
+Birthday message
+
+Sender name
+
+Image Composable
+
+Used to display an imported drawable image.
+
+Image imported via Resource Manager
+
+Stored inside res/drawable
+
+Displayed using painterResource()
+
+contentDescription added using string resources for accessibility
+
+Layout Structure
+
+Box used to layer image and text
+
+Column used to arrange text vertically
+
+Modifier used for:
+
+fillMaxSize()
+
+padding()
+
+alignment
+
+Accessibility Consideration
+
+contentDescription added for screen readers
+
+Used stringResource() instead of hard-coded text
+
+Followed best practices for maintainability and localization
+
+Learning Outcomes
+
+After completing this task:
+
+Understood how Compose replaces XML layouts
+
+Learned how to import and display drawable resources
+
+Used Modifier to control layout and styling
+
+Applied accessibility best practices
+
+Built a balanced UI using Compose
+
+Conclusion
+
+This task demonstrates how Text and Image composables can be combined effectively to create clean, accessible, and optimized UI layouts using Jetpack Compose.
