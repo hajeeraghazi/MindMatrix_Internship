@@ -2,4 +2,4 @@ In this session, I explored the Android ecosystem and understood how Android dev
 
 I also became familiar with the Android Studio interface, created a new project, and understood how UI and Kotlin code connect. The session highlighted the importance of accessibility and user-centered design to make applications inclusive and easy to use.
 
-Finally, I conceptualized my first app idea — a student productivity app that helps users manage tasks, set reminders, and track study progress. This session helped me build a strong foundation for future Android development projects.
+Finally, I conceptualized my first app idea a student productivity app that helps users manage tasks, set reminders, and track study progress. This session helped me build a strong foundation for future Android development projects.
