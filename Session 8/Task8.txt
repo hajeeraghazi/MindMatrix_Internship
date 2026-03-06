@@ -1,0 +1,67 @@
+Session 8: AADK Task 8 – UI Testing and Art Navigation
+Objective
+
+The objective of this session is to learn how to test user interfaces in Jetpack Compose and ensure that UI components behave correctly. Students also build an art viewer application that allows users to navigate through artworks using Next and Previous buttons.
+
+UI Testing in Jetpack Compose
+
+UI testing helps developers verify that the application behaves as expected when users interact with it. In Compose, testing tools allow developers to simulate user actions such as clicks and text input, and then verify the UI response.
+
+Example testing actions include:
+
+Clicking buttons
+
+Entering text
+
+Checking if certain UI elements appear on the screen
+
+This helps detect bugs early and ensures the application is reliable.
+
+Art Navigation App
+
+In this task, students build a simple Art Gallery Viewer where users can view different artworks and navigate between them.
+
+The app typically includes:
+
+Image of the artwork
+
+Title of the artwork
+
+Artist name and year
+
+Next button
+
+Previous button
+
+When the user presses Next, the app displays the next artwork.
+When the user presses Previous, the app shows the previous artwork.
+
+Example UI Logic
+
+The navigation works by storing the current artwork index in a state variable.
+
+var currentIndex by remember { mutableStateOf(0) }
+
+When a user clicks a button:
+
+currentIndex++
+
+Compose detects the state change and recomposes the UI, displaying the new artwork.
+
+Importance of UI Testing
+
+UI testing ensures that:
+
+Buttons trigger correct actions
+
+UI elements display correct data
+
+Navigation works properly
+
+The app behaves correctly under different scenarios
+
+This improves app reliability and user experience.
+
+Conclusion
+
+This session helps students understand how UI testing and state management work together in Jetpack Compose. By building an art navigation app and testing user interactions, students learn how to create reliable and dynamic Android applications.
