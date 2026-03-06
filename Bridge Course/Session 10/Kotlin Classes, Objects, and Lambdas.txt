@@ -1,0 +1,69 @@
+Session 10: AADK Task 10 – Kotlin Classes, Objects, and Lambdas
+Objective
+
+The objective of this session is to strengthen Kotlin programming fundamentals by learning how to create classes, objects, and lambda functions. Students practice organizing logic into reusable components and passing functions as parameters to make code more modular and flexible.
+
+Kotlin Classes and Objects
+
+A class in Kotlin is used to define a blueprint for creating objects. It contains properties and functions that describe the behavior of an object.
+
+Example:
+
+class Product(val name: String, val price: Double) {
+
+    fun display() {
+        println("Product: $name | Price: $price")
+    }
+}
+
+Here, Product is a class and each product instance is an object created from that class.
+
+Objects in Kotlin
+
+Objects represent real-world entities created from classes. They hold data and allow functions to operate on that data.
+
+Example:
+
+val laptop = Product("Laptop", 70000.0)
+laptop.display()
+
+This creates an object called laptop using the Product class.
+
+Lambda Functions
+
+A lambda is a short anonymous function that can be passed as a parameter to another function. Lambdas make code more concise and flexible.
+
+Example:
+
+val discount: (Double) -> Double = { price -> price * 0.9 }
+
+This lambda function applies a 10% discount to a price.
+
+Passing Functions as Parameters
+
+Kotlin supports higher-order functions, which means functions can accept other functions as parameters.
+
+Example:
+
+fun applyDiscount(price: Double, operation: (Double) -> Double): Double {
+    return operation(price)
+}
+
+Usage:
+
+val newPrice = applyDiscount(1000.0) { it * 0.9 }
+Benefits of Classes, Objects, and Lambdas
+
+Using these Kotlin features helps developers:
+
+Organize code into reusable components
+
+Improve readability and maintainability
+
+Implement flexible logic with higher-order functions
+
+Build scalable applications
+
+Conclusion
+
+This session teaches how Kotlin classes, objects, and lambdas work together to build structured and reusable code. By using these features, developers can create applications that are easier to maintain, extend, and understand.
