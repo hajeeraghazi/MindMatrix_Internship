@@ -1,0 +1,80 @@
+Session 13: AADK Task 13 – Accessibility, Testing, and Superheroes App
+Objective
+
+The objective of this session is to understand how to build accessible and testable Android applications using Jetpack Compose. Students learn how to design UI components that work well with assistive technologies such as screen readers while also validating UI behavior through automated testing.
+
+Accessibility in Jetpack Compose
+
+Accessibility ensures that applications can be used by all users, including those with disabilities. In Jetpack Compose, accessibility can be improved using semantic properties, which provide meaningful descriptions for UI elements.
+
+For example, screen readers such as TalkBack rely on these descriptions to inform visually impaired users about UI components.
+
+Example:
+
+Image(
+    painter = painterResource(id = R.drawable.superhero),
+    contentDescription = "Superhero image"
+)
+
+The contentDescription allows screen readers to describe the image.
+
+Semantic Properties
+
+Semantic properties help define the purpose and behavior of UI elements. They allow assistive tools to interpret the UI correctly.
+
+Example:
+
+Modifier.semantics {
+    contentDescription = "Hero name"
+}
+
+Using semantic tags also helps in UI testing, making elements easier to locate.
+
+UI Testing in Compose
+
+Jetpack Compose provides built-in tools to test user interface components automatically. Developers can simulate user interactions such as clicks and verify UI updates.
+
+Example test flow:
+
+Set the UI content using createComposeRule()
+
+Find UI elements using selectors such as onNodeWithText()
+
+Perform actions like performClick()
+
+Verify results using assertions
+
+Example:
+
+composeTestRule
+    .onNodeWithText("Superhero")
+    .assertExists()
+Superheroes App Mini-Project
+
+In this session, students build a Superheroes catalog app where each hero’s information is displayed using accessible UI components.
+
+Key features include:
+
+Displaying superhero data using lists
+
+Applying semantic descriptions for accessibility
+
+Structuring UI with Compose best practices
+
+Writing UI tests to validate behavior
+
+Benefits of Accessibility and Testing
+
+Implementing accessibility and testing offers several advantages:
+
+Improves usability for all users
+
+Supports screen readers and assistive technologies
+
+Helps detect UI bugs early
+
+Ensures apps are reliable and maintainable
+
+Conclusion
+
+This session highlights the importance of combining accessible design with automated UI testing. By using semantic properties and Compose testing tools, developers can create applications that are inclusive, reliable, and user-friendly.
