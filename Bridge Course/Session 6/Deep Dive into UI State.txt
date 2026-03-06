@@ -1,0 +1,70 @@
+Session 6: AADK Task 6 – Deep Dive into UI State
+Objective
+
+The objective of this session is to understand how structured state controls the user interface in Jetpack Compose. Students learn how UI elements react to user interactions, navigation changes, and configuration updates. This helps in building dynamic and interactive interfaces.
+
+Understanding UI State
+
+In Jetpack Compose, the UI is driven by state. Whenever the state changes, the UI automatically updates through a process called recomposition.
+
+State is usually stored using:
+
+var count by remember { mutableStateOf(0) }
+
+remember keeps the state across recompositions.
+
+mutableStateOf() creates an observable state.
+
+When the value changes, Compose recomposes the UI.
+
+Example: Button Click Counter
+@Composable
+fun CounterExample() {
+
+    var count by remember { mutableStateOf(0) }
+
+    Column {
+        Text(text = "Count: $count")
+
+        Button(onClick = { count++ }) {
+            Text("Increase")
+        }
+    }
+}
+How It Works
+
+The variable count stores the UI state.
+
+When the button is clicked, count increases.
+
+Compose detects the change.
+
+The UI recomposes automatically and updates the text.
+
+Managing Structured UI State
+
+Structured UI state means organizing UI data properly so that multiple UI elements respond consistently.
+
+Example:
+
+User inputs text
+
+Screen navigates to another page
+
+Layout adjusts when device orientation changes
+
+All these behaviors are controlled through state management.
+
+Benefits of UI State in Compose
+
+Enables dynamic UI updates
+
+Handles user interactions smoothly
+
+Maintains UI during configuration changes
+
+Simplifies complex multi-element screens
+
+Conclusion
+
+Understanding structured UI state is essential for building modern Android apps using Jetpack Compose. By managing state effectively, developers can create responsive, maintainable, and interactive user interfaces that automatically update based on user actions and application data.
