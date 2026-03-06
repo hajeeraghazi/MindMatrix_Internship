@@ -1,0 +1,77 @@
+Session 11: AADK Task 11 – Lists, LazyColumn, and Data Modeling
+Objective
+
+The objective of this session is to learn how to handle and display large sets of data in Jetpack Compose using lists. Students model structured data, bind it to UI components, and render it efficiently using LazyColumn, which enables scrollable content.
+
+Data Modeling in Kotlin
+
+Data modeling involves representing real-world information using Kotlin data classes. These classes store structured data that can be easily displayed in the UI.
+
+Example:
+
+data class Animal(
+    val name: String,
+    val species: String,
+    val imageRes: Int
+)
+
+Using data classes makes it easier to organize and pass data between different parts of an application.
+
+Lists in Kotlin
+
+Lists are used to store multiple objects of the same type. They are commonly used to manage collections of data that need to be displayed in the UI.
+
+Example:
+
+val animals = listOf(
+    Animal("Lion", "Carnivore", R.drawable.lion),
+    Animal("Elephant", "Herbivore", R.drawable.elephant),
+    Animal("Parrot", "Bird", R.drawable.parrot)
+)
+
+This list can later be used to populate a UI component.
+
+LazyColumn in Jetpack Compose
+
+LazyColumn is a Compose component used to display scrollable vertical lists efficiently. Unlike traditional lists, it only renders the items currently visible on the screen, improving performance when working with large datasets.
+
+Example:
+
+LazyColumn {
+    items(animals) { animal ->
+        Text(text = animal.name)
+    }
+}
+
+This code dynamically creates UI elements for each item in the list.
+
+Card Layouts for List Items
+
+Each list item can be displayed using a Card composable to create a structured and visually appealing layout.
+
+Example:
+
+Card {
+    Column {
+        Text(text = animal.name)
+        Text(text = animal.species)
+    }
+}
+
+Cards help organize content clearly and improve UI readability.
+
+Benefits of Using LazyColumn
+
+Using LazyColumn provides several advantages:
+
+Efficient rendering for large datasets
+
+Smooth scrollable UI
+
+Cleaner and modular UI code
+
+Easy data binding with Kotlin collections
+
+Conclusion
+
+In this session, students learn how to combine data modeling, Kotlin lists, and LazyColumn to create dynamic and scalable user interfaces. These techniques help developers build applications that efficiently display large amounts of data while maintaining good performance and readability.
