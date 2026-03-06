@@ -1,0 +1,76 @@
+Session 7: AADK Task 7 – Building Stateful and Calculative Apps
+Objective
+
+The goal of this session is to understand how state and logic work together in Jetpack Compose to build interactive and calculative applications. Students learn how to capture user input, process data, and update the UI dynamically.
+
+Understanding Stateful Apps
+
+A stateful app is an application where the user interface changes based on user input or data updates. In Jetpack Compose, this is handled using state variables that trigger recomposition whenever their values change.
+
+Example of state declaration:
+
+var amount by remember { mutableStateOf("") }
+
+When the value of amount changes, Compose automatically updates the UI.
+
+UI Components Used
+
+Stateful and calculative apps commonly combine multiple UI elements such as:
+
+TextField – to capture user input
+
+Slider – to adjust numeric values (e.g., percentage)
+
+Switch – to enable or disable options
+
+Button – to perform actions
+
+Text – to display calculated results
+
+These elements work together to create an interactive interface.
+
+Example Concept: Tip Calculator
+
+A typical example of a calculative app is a Tip Calculator.
+
+The app allows the user to:
+
+Enter the bill amount
+
+Select the tip percentage using a slider
+
+Enable round-up option using a switch
+
+Display the calculated tip amount
+
+Example logic:
+
+val tip = amount * tipPercent / 100
+
+When the user changes the amount or percentage, the UI recalculates and updates automatically.
+
+Importance of Data Flow
+
+Structured data flow ensures that:
+
+User input is stored as state
+
+Logic processes the state
+
+UI components update automatically
+
+This approach makes the application reactive and easy to maintain.
+
+Benefits of Stateful Calculative Apps
+
+Dynamic UI updates
+
+Better user interaction
+
+Clear separation of logic and UI
+
+Improved maintainability
+
+Conclusion
+
+Stateful and calculative apps demonstrate how Jetpack Compose manages data and UI together. By combining input components, validation, and state-driven logic, developers can build responsive applications that update instantly based on user interaction.
