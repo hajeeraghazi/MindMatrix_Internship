@@ -1,0 +1,65 @@
+Session 12: AADK Task 12 – Material Theming and UI Animation
+Objective
+
+The goal of this session is to understand how Material Design theming and animations are used in Jetpack Compose to create visually appealing and user-friendly applications. Students learn to customize colors, typography, and shapes while adding smooth UI transitions using Compose Animation APIs.
+
+Material Theming in Jetpack Compose
+
+Material Theming allows developers to maintain a consistent visual style across an application. It includes three main components:
+
+Color Scheme – Defines primary, secondary, and background colors used throughout the app.
+
+Typography – Specifies font styles and text sizes.
+
+Shapes – Controls the shape of UI elements such as buttons, cards, and surfaces.
+
+Example:
+
+MaterialTheme(
+    colorScheme = lightColorScheme(),
+    typography = Typography,
+    shapes = Shapes
+) {
+    AppContent()
+}
+
+This ensures that all composables inside the theme follow the defined design system.
+
+UI Animation in Compose
+
+Jetpack Compose provides built-in animation APIs that allow UI elements to change smoothly when state changes. Animations improve user experience by making transitions feel natural.
+
+Common animation tools include:
+
+animate*AsState() – Animates values when state changes
+
+AnimatedVisibility() – Shows or hides components with animation
+
+updateTransition() – Manages multiple animations together
+
+Crossfade() – Smoothly switches between UI states
+
+Example:
+
+val size by animateDpAsState(
+    targetValue = if (expanded) 200.dp else 100.dp
+)
+
+This animates the component size whenever the state changes.
+
+Benefits of Material Theming and Animation
+
+Using theming and animation provides several advantages:
+
+Creates a consistent UI design
+
+Improves visual hierarchy and readability
+
+Enhances user interaction feedback
+
+Makes apps feel modern and responsive
+
+Conclusion
+
+Material Theming and UI Animation help developers build professional, visually appealing applications in Jetpack Compose. By combining structured design systems with smooth animations, developers can improve usability and provide a better user experience.
+
