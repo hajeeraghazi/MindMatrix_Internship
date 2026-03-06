@@ -1,0 +1,77 @@
+Session 5: AADK Task 5 – Understanding State in Compose
+Objective
+
+The objective of this task is to understand how state works in Jetpack Compose and how it enables real-time UI updates. By managing state properly, the UI automatically refreshes when the data changes. This session focuses on capturing user input and updating the interface instantly through recomposition.
+
+Understanding State in Compose
+
+In Jetpack Compose, state refers to any value that can change over time and affects what is displayed on the screen. When the value of the state changes, Compose automatically recomposes the UI to reflect the updated data.
+
+State is commonly stored using:
+
+var text by remember { mutableStateOf("") }
+
+remember → Keeps the state during recomposition.
+
+mutableStateOf() → Creates a mutable state that Compose observes.
+
+Whenever the value of text changes, the UI updates automatically.
+
+Example: Capturing User Input
+
+A simple example is capturing text from a user and displaying it on the screen.
+
+@Composable
+fun GreetingInput() {
+
+    var name by remember { mutableStateOf("") }
+
+    Column {
+        TextField(
+            value = name,
+            onValueChange = { name = it },
+            label = { Text("Enter your name") }
+        )
+
+        Text(text = "Hello $name")
+    }
+}
+How it Works
+
+The TextField captures user input.
+
+The value is stored in the state variable name.
+
+When the user types something, the value updates.
+
+Compose recomposes the UI, and the greeting text updates instantly.
+
+Recomposition in Compose
+
+Recomposition is the process where Compose redraws parts of the UI when state changes.
+
+For example:
+
+User types in the text field
+
+name state updates
+
+Compose recomposes the UI
+
+The greeting text updates automatically
+
+This makes UI updates efficient and reactive.
+
+Benefits of State Management
+
+Real-time UI updates
+
+Reactive UI behavior
+
+Simpler state-driven programming
+
+Better separation of UI and data
+
+Conclusion
+
+State management is a fundamental concept in Jetpack Compose. By using remember and mutableStateOf, developers can build responsive UIs that automatically update when data changes. Understanding state and recomposition helps create interactive and dynamic Android applications efficiently.
