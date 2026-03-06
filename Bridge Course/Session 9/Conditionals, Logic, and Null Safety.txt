@@ -1,0 +1,62 @@
+Session 9: AADK Task 9 – Conditionals, Logic, and Null Safety
+Objective
+
+The objective of this session is to strengthen Kotlin programming fundamentals by focusing on conditional logic and null safety. Students learn how to safely handle nullable values and avoid runtime crashes while building reliable applications.
+
+Understanding Conditionals in Kotlin
+
+Conditionals allow a program to make decisions based on certain conditions. In Kotlin, common conditional statements include:
+
+if / else
+
+when expression
+
+Example:
+
+val age = 18
+
+if (age >= 18) {
+    println("Eligible to vote")
+} else {
+    println("Not eligible")
+}
+
+These constructs help control the flow of the program based on logical conditions.
+
+Null Safety in Kotlin
+
+One of Kotlin’s key features is null safety, which helps prevent NullPointerException errors. Variables can be declared as nullable using the ? symbol.
+
+Example:
+
+val name: String? = null
+
+To safely access nullable values, Kotlin provides operators such as:
+
+Safe Call Operator (?.)
+
+Elvis Operator (?:)
+
+Not-null Assertion (!!)
+
+Example:
+
+val length = name?.length ?: 0
+
+Here, if name is null, the length defaults to 0.
+
+Benefits of Null Safety
+
+Null safety ensures that applications are more stable and less prone to crashes. By using safe calls and proper condition checks, developers can safely manage optional data values.
+
+Key advantages include:
+
+Preventing runtime exceptions
+
+Writing cleaner and safer code
+
+Improving application reliability
+
+Conclusion
+
+This session helps students understand how conditional logic and null safety work together in Kotlin. By practicing safe calls and condition checks, developers can build applications that handle unexpected values gracefully and maintain stability.
