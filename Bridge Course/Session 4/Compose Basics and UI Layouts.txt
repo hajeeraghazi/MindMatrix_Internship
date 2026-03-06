@@ -1,0 +1,71 @@
+Session 4: AADK Task 4 – Compose Basics and UI Layouts
+Objective
+
+The objective of this task is to understand the fundamentals of Jetpack Compose UI layouts. The focus is on planning and reviewing UI structures such as a business card layout, ensuring proper alignment, readability, responsiveness, and accessibility before implementing the code.
+
+UI Layout Plan (Business Card)
+
+The business card layout is designed using Compose layout components to maintain structure and alignment.
+
+Layout Structure
+
+Column (Main Container)
+
+Used as the primary layout container.
+
+Aligns elements vertically.
+
+Centers the content horizontally.
+
+Logo Section
+
+Displays an Android logo or icon.
+
+Positioned at the top.
+
+Center aligned.
+
+Header Section
+
+Displays the Name and Title.
+
+Text is center aligned.
+
+Uses different font sizes for hierarchy.
+
+Contact Information Section
+
+Displays Phone Number and Email Address.
+
+Uses Row layout with icons and text.
+
+Placed at the bottom of the screen.
+
+UI Design Principles Applied
+1. Alignment
+
+All components are center aligned to maintain a clean and professional layout.
+
+2. Readability
+
+Different text sizes and spacing are used to clearly separate the name, title, and contact details.
+
+3. Responsiveness
+
+Using Compose layout elements like Column, Row, Spacer, and Modifier.fillMaxSize() ensures the layout adapts to different screen sizes.
+
+4. Accessibility
+
+Icons are paired with text labels so users can easily understand contact details.
+
+Expected UI Layout Structure
+Column
+ ├── Logo (Image)
+ ├── Name (Text)
+ ├── Title (Text)
+ └── Contact Section
+      ├── Row (Phone Icon + Phone Number)
+      └── Row (Email Icon + Email Address)
+Reflection
+
+This task helped in understanding how Jetpack Compose layouts work using components such as Column, Row, and Modifier. Planning the layout before coding improves UI organization and makes the implementation easier. It also ensures that the design remains responsive and accessible for users.
